@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomTrack Pomodoro</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">BloomTrack Pomodoro 🍅✨</h1>
+
+        <!-- Circular Timer -->
+        <div class="timer-wrapper">
+            <svg class="progress-ring" width="220" height="220">
+                <circle class="progress-ring__circle" 
+                        stroke-width="10" 
+                        r="100" cx="110" cy="110"/>
+            </svg>
+            <div class="timer-text" id="display">00:00</div>
+        </div>
+
+        <p id="status" class="status">Focus Mode 🔥</p>
+
+        <!-- Custom Time Input -->
+        <div class="custom-time">
+            <input id="focusTime" type="number" placeholder="Enter focus minutes (ex: 45)">
+            <button onclick="applyCustomTime()">Set Timer</button>
+        </div>
+
+        <!-- Buttons -->
+        <div class="controls">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>

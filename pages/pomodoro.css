@@ -1,0 +1,82 @@
+/* Main layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    color: #ff6fa8;
+    margin-bottom: 20px;
+}
+
+/* Circular Timer */
+.timer-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #ff98c9;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.3s linear;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    color: #ff6fa8;
+    font-weight: bold;
+}
+
+.status {
+    font-size: 1.2rem;
+    color: #ff8ab6;
+}
+
+/* Inputs */
+.custom-time input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffbcd9;
+    outline: none;
+    margin-right: 5px;
+}
+
+.custom-time button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #ff88c4;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Buttons */
+.controls button {
+    padding: 12px 30px;
+    margin: 8px;
+    border-radius: 12px;
+    border: none;
+    background: #ff6fa8;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}

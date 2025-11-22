@@ -1,0 +1,127 @@
+{
+  "ai_ml": {
+    "title": "AI / Machine Learning Roadmap",
+    "steps": [
+      "Learn Python fundamentals",
+      "Master Numpy, Pandas, Matplotlib",
+      "Study Statistics & Probability",
+      "Learn Machine Learning algorithms",
+      "Work on ML projects",
+      "Learn Deep Learning",
+      "Explore TensorFlow / PyTorch",
+      "Build real-world AI applications"
+    ],
+    "resources": [
+      { "name": "Python for ML - FreeCodeCamp", "link": "https://youtu.be/7eh4d6sabA0" },
+      { "name": "Andrew Ng ML Course", "link": "https://www.coursera.org/learn/machine-learning" }
+    ]
+  },
+
+  "data_science": {
+    "title": "Data Science Roadmap",
+    "steps": [
+      "Learn Python basics",
+      "Master Statistics",
+      "SQL fundamentals",
+      "Data cleaning techniques",
+      "Exploratory Data Analysis",
+      "Machine Learning",
+      "Data Visualization (PowerBI/Tableau)",
+      "Build DS projects"
+    ],
+    "resources": [
+      { "name": "Data Science Full Course", "link": "https://youtu.be/-ETQ97mXXF0" },
+      { "name": "Statistics for Data Science", "link": "https://youtu.be/xxpc-HPKN28" }
+    ]
+  },
+
+  "blockchain": {
+    "title": "Blockchain Roadmap",
+    "steps": [
+      "Understand how blockchain works",
+      "Learn Cryptography basics",
+      "Learn Solidity programming",
+      "Smart Contract development",
+      "DApp Development",
+      "Deploying on Ethereum testnet",
+      "Understanding Web3.js",
+      "Build blockchain projects"
+    ],
+    "resources": [
+      { "name": "Solidity Course", "link": "https://youtu.be/gyMwXuJrbJQ" },
+      { "name": "Blockchain Explained", "link": "https://youtu.be/WSN5BaCzsbo" }
+    ]
+  },
+
+  "cybersecurity": {
+    "title": "Cybersecurity Roadmap",
+    "steps": [
+      "Networking fundamentals",
+      "Learn Linux & Commands",
+      "System Security basics",
+      "Learn common tools (Nmap, Burp Suite)",
+      "Web Security",
+      "Penetration Testing",
+      "Capture The Flags (CTF)",
+      "Build Cybersec projects"
+    ],
+    "resources": [
+      { "name": "Network Basics", "link": "https://youtu.be/qiQR5rTSshw" },
+      { "name": "Ethical Hacking Crash Course", "link": "https://youtu.be/fNzpcB7ODxQ" }
+    ]
+  },
+
+  "web_dev": {
+    "title": "Web Development Roadmap",
+    "steps": [
+      "HTML + CSS basics",
+      "Learn JavaScript fundamentals",
+      "Responsive design",
+      "Frontend frameworks (React/Vue)",
+      "Backend (Node.js)",
+      "Databases (MongoDB/MySQL)",
+      "APIs & Authentication",
+      "Build full-stack projects"
+    ],
+    "resources": [
+      { "name": "HTML + CSS Full Course", "link": "https://youtu.be/G3e-cpL7ofc" },
+      { "name": "JavaScript Full Course", "link": "https://youtu.be/8dWL3wF_OMw" }
+    ]
+  },
+
+  "python": {
+    "title": "Python Language Roadmap",
+    "steps": [
+      "Learn Syntax & Variables",
+      "Control Flow (loops, conditions)",
+      "Functions",
+      "Modules",
+      "Object-Oriented Programming",
+      "File Handling",
+      "Error Handling",
+      "Projects"
+    ],
+    "resources": [
+      { "name": "Python Full Course", "link": "https://youtu.be/_uQrJ0TkZlc" },
+      { "name": "Python in 1 Hour", "link": "https://youtu.be/kqtD5dpn9C8" }
+    ]
+  },
+
+  "javascript": {
+    "title": "JavaScript Language Roadmap",
+    "steps": [
+      "Basics of JS",
+      "DOM Manipulation",
+      "ES6+ features",
+      "Asynchronous JS (Promises, Async/Await)",
+      "APIs + Fetch",
+      "Modules",
+      "Frameworks (React)",
+      "Projects"
+    ],
+    "resources": [
+      { "name": "JS Full Course", "link": "https://youtu.be/PkZNo7MFNFg" },
+      { "name": "DOM Crash Course", "link": "https://youtu.be/0ik6X4DJKCc" }
+    ]
+  }
+}
