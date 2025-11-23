@@ -6,26 +6,40 @@
     <title>BloomTrack Pomodoro</title>
     <link rel="stylesheet" href="pomodoro.css">
 </head>
-<body>
-    <div class="container">
-        <h1 class="title">BloomTrack Pomodoro 🍅✨</h1>
 
-        <!-- Circular Timer -->
-        <div class="timer-wrapper">
-            <svg class="progress-ring" width="220" height="220">
-                <circle class="progress-ring__circle" 
-                        stroke-width="10" 
-                        r="100" cx="110" cy="110"/>
-            </svg>
-            <div class="timer-text" id="display">00:00</div>
+<body>
+
+    <!-- 🌸 BLOOMTRACK HEADER -->
+    <header class="bt-header">
+        <div class="logo">BloomTrack 🌸</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../pages/roadmap.html">Roadmaps</a>
+            <a class="active" href="../pages/pomodoro.html">Pomodoro</a>
+            <a href="../pages/schedule.html">Schedule</a>
+            <a href="../pages/mental-health.html">Mental Health</a>
+        </nav>
+    </header>
+
+    <!-- ✨ Motivational Popup -->
+    <div id="quotePopup" class="quote-popup">
+        <p id="quoteText"></p>
+        <button onclick="closeQuote()">Let's Study 💕</button>
+    </div>
+
+    <!-- 🌸 MAIN POMODORO SECTION -->
+    <section class="container">
+
+        <h1 class="title">BloomTrack Pomodoro 🌸⏱️</h1>
+
+        <!-- Round Timer -->
+        <div class="timer-circle" id="timerCircle">
+            <span id="timeDisplay">25:00</span>
         </div>
 
-        <p id="status" class="status">Focus Mode 🔥</p>
-
-        <!-- Custom Time Input -->
-        <div class="custom-time">
-            <input id="focusTime" type="number" placeholder="Enter focus minutes (ex: 45)">
-            <button onclick="applyCustomTime()">Set Timer</button>
+        <div class="inputs">
+            <input type="number" id="customTime" placeholder="Enter minutes">
+            <button onclick="setTimer()">Set Timer</button>
         </div>
 
         <!-- Buttons -->
@@ -33,9 +47,54 @@
             <button onclick="startTimer()">Start</button>
             <button onclick="pauseTimer()">Pause</button>
             <button onclick="resetTimer()">Reset</button>
+            <button class="settings-btn" onclick="openSettings()">⚙️</button>
         </div>
+
+        <!-- 🌸 TASK LIST -->
+       <div class="task-container">
+            <h2>Task List 🗒️🖊️</h2>
+
+            <div class="task-input-row">
+                <input type="text" id="taskInput" placeholder="Add a task…" />
+                <button id="addTaskBtn">Add</button>
+            </div>
+
+            <div id="taskList"></div>
+        </div>
+
+    </section>
+
+    <!-- 🎨 SETTINGS POPUP -->
+    <div id="settingsPanel" class="settings-panel">
+
+        <h2>Customize ✨</h2>
+
+        <label>Background Color</label>
+        <div class="color-options">
+            <div class="color-box c1" onclick="changeBG('#f5e8ff')"></div>
+            <div class="color-box c2" onclick="changeBG('#ffe6f2')"></div>
+            <div class="color-box c3" onclick="changeBG('#e9f7ff')"></div>
+        </div>
+
+        <label>Background Image</label>
+        <input type="file" accept="image/*" onchange="uploadBG(event)">
+
+        <label>Background Sound</label>
+        <select id="soundSelect" onchange="changeSound()">
+            <option value="">None</option>
+            <option value="rain.mp3">Rain 🌧️</option>
+            <option value="lofi.mp3">Lofi 🎧</option>
+            <option value="piano.mp3">Piano 🎹</option>
+            <option value="brownnoise.mp3">Brown Noise 🌫️</option>
+        </select>
+
+        <button onclick="closeSettings()" class="close-btn">Close</button>
     </div>
 
+    <audio id="endSound" src="ding.mp3"></audio>
+    <audio id="bgSound" loop></audio>
+
     <script src="pomodoro.js"></script>
+
 </body>
 </html>
