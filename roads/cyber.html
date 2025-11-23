@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cybersecurity — BloomTrack Roadmap</title>
+
+  <link rel="stylesheet" href="cyber.css">
+  <link rel="stylesheet" href="../global/theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="theme-bloom">
+
+   <header >  
+<nav class="navbar">
+        <div class="logo">BloomTrack 🌸</div>
+        <ul class="nav-links">
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+<button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+        
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+
+  <main class="container">
+    <!-- page hero -->
+    <section class="page-hero">
+      <div class="page-logo">🌺</div>
+      <div class="page-info">
+        <h1>Cybersecurity — Beginner → Pro</h1>
+        <p class="lead">A soft, flowery path to mastering cybersecurity — fundamentals, labs, projects & more.</p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <main class="content">
+
+        <!-- ROADMAP -->
+        <section class="card">
+          <h2>🌼 Roadmap overview</h2>
+          <div class="roadmap">
+            <div class="level">
+              <div class="bubble">1</div>
+              <div>
+                <h3>Foundations</h3>
+                <p>
+                  <a href="https://www.cloudflare.com/learning/security/what-is-cyber-security/" target="_blank">Cybersecurity basics</a>,
+                  <a href="https://www.cloudflare.com/learning/ssl/what-is-ssl/" target="_blank">encryption</a>,
+                  threat modelling, auth vs authz.
+                </p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">2</div>
+              <div>
+                <h3>Networking & Systems</h3>
+                <p>Networking (TCP/IP), packet analysis (Wireshark), scanning (Nmap), Linux basics.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">3</div>
+              <div>
+                <h3>Offense & Tools</h3>
+                <p>Web security (OWASP), Kali, Metasploit, CTF labs.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">4</div>
+              <div>
+                <h3>Defense & Career</h3>
+                <p>MITRE ATT&CK, SIEM/logging, incident response, security governance.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLANNER -->
+        <section class="card">
+          <h2>🌷 Weekly planner</h2>
+          <div class="planner-inputs">
+            <label>Hours/week: <input id="hours" type="number" value="8" min="1"></label>
+            <label>Weeks per level: <input id="weeks" type="number" value="6" min="1"></label>
+            <button class="btn" id="planBtn">Generate Plan</button>
+          </div>
+          <div id="planResult" class="muted"></div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="card">
+          <h2>🌺 Hands-on projects</h2>
+          <ol class="projects">
+            <li>Analyze network traffic and write a report (Wireshark).</li>
+            <li>Scan & enumerate a lab VM (Nmap).</li>
+            <li>Find & fix OWASP Top 10 issues on a test app (BurpSuite/DVWA).</li>
+            <li>Complete TryHackMe / HackTheBox rooms and document writeups.</li>
+            <li>Build a small SIEM dashboard for logs (Elastic Stack).</li>
+          </ol>
+        </section>
+
+        <!-- SIMULATOR -->
+        <section class="card">
+          <h2>🌸 Mini risk simulator</h2>
+          <p class="muted">Add assets, threats and impact. Watch a simple risk summary.</p>
+
+          <div class="sim-row">
+            <input id="asset" placeholder="Asset (e.g., Web Server)" />
+            <input id="threat" placeholder="Threat (e.g., SQLi)" />
+            <input id="impact" placeholder="Impact (1-10)" type="number" min="1" max="10" />
+            <button class="btn" id="addRisk">Add Risk</button>
+          </div>
+
+          <div class="sim-row">
+            <button class="btn clear" id="calcRisk">Calculate Risk</button>
+            <div id="simFeedback" class="muted" aria-live="polite"></div>
+          </div>
+
+          <div class="sim-area">
+            <h4>Risks</h4>
+            <ul id="riskList" class="pending"></ul>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar">
+        <section class="card">
+          <h3>🌼 Progress checklist</h3>
+          <div class="checklist" id="checklist">
+            <label class="check"><input type="checkbox" data-key="c1"> Foundations</label>
+            <label class="check"><input type="checkbox" data-key="c2"> Networking & Linux</label>
+            <label class="check"><input type="checkbox" data-key="c3"> Tools & Labs</label>
+            <label class="check"><input type="checkbox" data-key="c4"> Web & App Security</label>
+            <label class="check"><input type="checkbox" data-key="c5"> Incident Response</label>
+          </div>
+
+          <div class="progress-wrap">
+            <label class="muted">Completion</label>
+            <progress id="progress" value="0" max="5"></progress>
+            <div id="progressText" class="muted">0/5</div>
+          </div>
+        </section>
+
+        <section class="card resources">
+          <h3>🌷 Resources</h3>
+          <ul>
+            <li><a href="https://tryhackme.com/" target="_blank">TryHackMe — guided labs</a></li>
+            <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger — Web security</a></li>
+            <li><a href="https://www.wireshark.org/" target="_blank">Wireshark — packet analysis</a></li>
+            <li><a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>🌸 Milestones</h3>
+          <ol class="muted">
+            <li>2 months — groundwork & Linux</li>
+            <li>6 months — labs & pentesting</li>
+            <li>12+ months — SOC / IR / advanced skills</li>
+          </ol>
+        </section>
+
+        <footer class="muted small">Safety tip: practice only in legal labs and testnets 🌸</footer>
+      </aside>
+    </div>
+  </main>
+
+  <script defer src="cyber.js"></script>
+  <script src="../global/theme.js"></script>
+</body>
+</html>

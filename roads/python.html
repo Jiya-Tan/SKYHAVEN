@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bloomtrack — Python Roadmap</title>
+  <link rel="stylesheet" href="python.css">
+   <link rel="stylesheet" href="../global/theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+    <body class="theme-bloom">
+   <header >  
+<nav class="navbar">
+        <div class="logo">BloomTrack 🌸</div>
+        <ul class="nav-links">
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+
+  <div class="container">
+    <header>
+      <div class="loogo">Py</div>
+      <div>
+        <h1>Python — Beginner → Pro (Interactive Bloomtrack Roadmap)</h1>
+        <p class="lead">Master Python step-by-step with weekly plans, quizzes, projects & progress tracking 🌸</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+
+        <!-- ROADMAP -->
+        <section class="card">
+          <h2>Roadmap overview</h2>
+          <div class="roadmap">
+            <div class="level">
+              <div class="bubble">1</div>
+              <div>
+                <h3>Foundations</h3>
+                <p>Syntax, variables, control flow, functions, basic input/output.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">2</div>
+              <div>
+                <h3>Core Skills</h3>
+                <p>Data structures, OOP, modules, errors, virtualenv, packaging basics.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">3</div>
+              <div>
+                <h3>Libraries & Tools</h3>
+                <p>Pandas, NumPy, requests, Flask/Django, testing, debugging.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">4</div>
+              <div>
+                <h3>Advanced & Production</h3>
+                <p>Async, type hints, performance, patterns, deployment, CI/CD.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WEEKLY PLAN -->
+        <section class="card">
+          <h2>Weekly plan generator</h2>
+          <div class="planner-inputs">
+            <label>Hours/week: <input id="hours" type="number" value="8" min="1"></label>
+            <label>Weeks per level: <input id="weeks" type="number" value="6" min="1"></label>
+            <button class="btn" id="planBtn">Generate Plan</button>
+          </div>
+          <div id="planResult" class="muted"></div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="card">
+          <h2>Practice projects</h2>
+          <ol class="projects">
+            <li>Beginner: Calculator CLI, file I/O, mini web scraper (requests + BS4).</li>
+            <li>Intermediate: REST API (Flask/FastAPI), Pandas cleaning project, CLI tool.</li>
+            <li>Advanced: Celery workers, async microservices, PyPI package.</li>
+            <li>Expert: Profiling, Cython, architecture design.</li>
+          </ol>
+        </section>
+
+        <!-- QUIZ -->
+        <section class="card">
+          <h2>Quick quiz</h2>
+          <p class="muted">What is a Python generator & why is it useful?</p>
+          <textarea id="quizAnswer"></textarea>
+          <div class="quiz-actions">
+            <button class="btn" id="checkQuiz">Check</button>
+            <div id="quizFeedback" class="muted"></div>
+          </div>
+        </section>
+
+        <!-- CODE SNIPPETS -->
+        <section class="card">
+          <h2>Code snippets</h2>
+          <label>Select snippet:
+            <select id="snippetSelect">
+              <option value="hello">Hello + Args</option>
+              <option value="readcsv">Read CSV (pandas)</option>
+              <option value="flask">Flask App</option>
+            </select>
+          </label>
+
+          <pre id="snippetPreview" class="codeBlock"></pre>
+
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <button class="btn" id="downloadBtn">Download</button>
+            <a id="runOnline" class="btn clear" href="#" target="_blank">Run Online</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <section class="card">
+          <h3>Checklist</h3>
+          <div id="checklist" class="checklist">
+            <label class="check"><input type="checkbox" data-key="c1"> Python basics</label>
+            <label class="check"><input type="checkbox" data-key="c2"> Data structures + OOP</label>
+            <label class="check"><input type="checkbox" data-key="c3"> Framework (Flask/FastAPI)</label>
+            <label class="check"><input type="checkbox" data-key="c4"> Testing + Type hints</label>
+            <label class="check"><input type="checkbox" data-key="c5"> Deploy app</label>
+          </div>
+
+          <div class="progress-wrap">
+            <label class="muted">Completion</label>
+            <progress id="progress" value="0" max="5"></progress>
+            <div id="progressText" class="muted">0/5</div>
+          </div>
+        </section>
+
+        <section class="card resources">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://docs.python.org/3/" target="_blank">Official Python Docs</a></li>
+            <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
+            <li><a href="https://pandas.pydata.org/" target="_blank">Pandas Docs</a></li>
+            <li><a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI Docs</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Milestones</h3>
+          <ol class="muted">
+            <li>1–2 months → Python basics + 1 project</li>
+            <li>6 months → Libraries + intermediate apps</li>
+            <li>1 year → Production, deployment, optimization</li>
+          </ol>
+        </section>
+
+        <footer class="muted">Tip: build projects, read code, contribute to open-source 💗</footer>
+      </aside>
+    </div>
+  </div>
+
+  <script src="python.js"></script>
+  <script src="../global/theme.js"></script>
+</body>
+</html>

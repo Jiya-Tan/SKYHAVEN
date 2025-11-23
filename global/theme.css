@@ -1,0 +1,252 @@
+/* 🌸 HEADER BUTTON */
+.settings-btn {
+    font-size: 20px;
+    background: var(--accent2);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.settings-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 🌸 POPUP OVERLAY */
+.theme-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* 💗 POPUP BODY */
+.theme-popup-content {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 20px;
+    width: 330px;
+    text-align: center;
+    animation: pop 0.3s ease;
+}
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* THEME OPTIONS */
+.theme-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.theme-choice {
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.theme-choice:hover {
+    transform: scale(1.05);
+    background: var(--accent2);
+}
+
+/* 🌙 CLOSE BUTTON */
+.close-popup {
+    margin-top: 20px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------------------------------- */
+/* 🌸 DEFAULT BLOOMTRACK THEME */
+:root {
+    --bg: #f7f3ff;
+    --card: #e6c7c7;
+    --accent: #b95cad;
+    --text: #333;
+    --soft: #e8daff;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* 🌅 SUNSET THEME */
+body.sunset {
+    --bg: linear-gradient(135deg, #e7681e, #e2a31b);
+    --card: #d8472d70;
+    --text: #4a0e0e;
+    --accent: #ecbe98;
+    --accent2: #ffd4c8;
+
+    .navbar .active {
+    color: #ffd971;
+    font-weight: 600;
+}
+.timer-circle {
+    
+    border: 10px solid #ecd81d;
+    color: #ecd81d;
+    transition: box-shadow 0.5s ease;
+}
+.inputs input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #db903a;
+}
+.inputs button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: #fd711f;
+    color: white;
+    border: none;
+}
+
+/* Controls */
+.controls button {
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: #ffad7e;
+    color: white;
+    font-size: 16px;
+}
+.settings-btn {
+    background: #ffad7e !important;
+}
+.container {
+    text-align: center;
+    margin-top: 60px;
+    color: #dceb5b;
+}
+.task-input-row button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #eed338;
+    color: #ffffff;
+    font-size: medium;
+}
+.quote-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(247, 244, 121);
+    padding: 30px;
+    border-radius: 20px;
+    width: 330px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 5px 25px rgba(168, 65, 65, 0.2);
+
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #fafc7d;
+    margin-top: 50px;
+}
+}
+
+/* 🌙 NIGHT THEME */
+body.night {
+    --bg: linear-gradient(135deg, #0c0c2c, #1f1f3b);
+    --card: #ffffff30;
+    --text: #dcdcff;
+    --accent: #8f8fff;
+    --accent2: #b4b4ff;
+
+    .timer-circle {
+    
+    border: 10px solid #1d70ec;
+    color: #1d70ec;
+    transition: box-shadow 0.5s ease;
+}
+.inputs input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #3a60db;
+}
+.inputs button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: #1f6dfd;
+    color: white;
+    border: none;
+}
+
+
+.bubble{
+  width:48px;height:48px;border-radius:10px;background:#071a2a;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:18px;
+}
+
+/* Controls */
+.controls button {
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: #807eff;
+    color: white;
+    font-size: 16px;
+}
+.settings-btn {
+    background: #7e8bff !important;
+}
+.container {
+    text-align: center;
+    margin-top: 60px;
+    color: #5b8deb;
+}
+.task-input-row button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #8533f0;
+    color: #ffffff;
+    font-size: medium;
+}
+.quote-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(83, 134, 201);
+    padding: 30px;
+    border-radius: 20px;
+    width: 330px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 5px 25px rgba(168, 65, 65, 0.2);
+
+}
+
+.codeBlock{
+  background:#0e113b;padding:12px;border-radius:8px;
+  border:1px solid rgba(238, 222, 222, 0.03);
+  white-space:pre-wrap;
+}
+
+
+}

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blockchain — BloomTrack Roadmap</title>
+
+  <link rel="stylesheet" href="bc.css">
+   <link rel="stylesheet" href="../global/theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="theme-bloom">
+
+  <!-- BLOOMTRACK HEADER (Option A: Home · Roadmaps · Pomodoro) -->
+   
+   <header >  
+<nav class="navbar">
+        <div class="logo">BloomTrack 🌸</div>
+        <ul class="nav-links">
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+    
+   </header>
+  <main class="container">
+    <!-- page hero (kept simple to match BloomTrack) -->
+    <section class="page-hero">
+      <div class="page-logo">🌺</div>
+      <div class="page-info">
+        <h1>Blockchain — Beginner → Pro</h1>
+        <p class="lead">A soft, flowery path to mastering blockchain — concepts, hands-on simulator, projects & more.</p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <main class="content">
+
+        <!-- ROADMAP -->
+        <section class="card">
+          <h2>🌼 Roadmap overview</h2>
+          <div class="roadmap">
+            <div class="level">
+              <div class="bubble">1</div>
+              <div>
+                <h3>Foundations</h3>
+                <p>
+                  <a href="https://www.cloudflare.com/learning/cryptography/" target="_blank">Cryptography basics</a>,
+                  <a href="https://www.geeksforgeeks.org/distributed-systems/" target="_blank">distributed systems</a>,
+                  wallets, addresses.
+                </p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">2</div>
+              <div>
+                <h3>Core Blockchain</h3>
+                <p>Hashing, blocks, consensus (PoW/PoS), transactions, UTXO vs account models.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">3</div>
+              <div>
+                <h3>Smart Contracts</h3>
+                <p>Solidity/EVM, patterns, security practices, testing tools.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">4</div>
+              <div>
+                <h3>Production & Research</h3>
+                <p>Layer 2 & scaling, consensus research, tokenomics, audits.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLANNER -->
+        <section class="card">
+          <h2>🌷 Weekly planner</h2>
+          <div class="planner-inputs">
+            <label>Hours/week: <input id="hours" type="number" value="8" min="1"></label>
+            <label>Weeks per level: <input id="weeks" type="number" value="6" min="1"></label>
+            <button class="btn" id="planBtn">Generate Plan</button>
+          </div>
+          <div id="planResult" class="muted"></div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="card">
+          <h2>🌺 Hands-on projects</h2>
+          <ol class="projects">
+            <li>Build a wallet & sign messages (JS) — understand keys and addresses.</li>
+            <li>Create a simple blockchain & explorer (Python/JS).</li>
+            <li>Write & test a Solidity smart contract (Hardhat).</li>
+            <li>Deploy a dApp with MetaMask integration.</li>
+            <li>Audit an open-source contract and fix vulnerabilities.</li>
+          </ol>
+        </section>
+
+        <!-- SIMULATOR -->
+        <section class="card">
+          <h2>🌸 Interactive blockchain simulator</h2>
+          <p class="muted">Add transactions, mine blocks, and watch your mini-chain bloom.</p>
+
+          <div class="sim-row">
+            <input id="txFrom" placeholder="from (address)" />
+            <input id="txTo" placeholder="to (address)" />
+            <input id="txAmount" placeholder="amount" type="number" />
+            <button class="btn" id="addTx">Add Tx</button>
+          </div>
+
+          <div class="sim-row">
+            <label class="muted">Difficulty:
+              <input id="difficulty" type="number" value="3" min="1" max="6">
+            </label>
+            <button class="btn" id="mineBtn">Mine Block</button>
+            <button class="btn clear" id="verifyBtn">Verify Chain</button>
+            <div id="simFeedback" class="muted"></div>
+          </div>
+
+          <div class="sim-area">
+            <h4>Pending Transactions</h4>
+            <ul id="pendingList" class="pending"></ul>
+
+            <h4>Blockchain</h4>
+            <div id="chainWrap" class="chain-wrap"></div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar">
+        <section class="card">
+          <h3>🌼 Progress checklist</h3>
+          <div class="checklist" id="checklist">
+            <label class="check"><input type="checkbox" data-key="c1"> Crypto & hashing</label>
+            <label class="check"><input type="checkbox" data-key="c2"> Build & run a chain</label>
+            <label class="check"><input type="checkbox" data-key="c3"> Smart contracts</label>
+            <label class="check"><input type="checkbox" data-key="c4"> dApp integration</label>
+            <label class="check"><input type="checkbox" data-key="c5"> Audits & scaling</label>
+          </div>
+
+          <div class="progress-wrap">
+            <label class="muted">Completion</label>
+            <progress id="progress" value="0" max="5"></progress>
+            <div id="progressText" class="muted">0/5</div>
+          </div>
+        </section>
+
+        <section class="card resources">
+          <h3>🌷 Resources</h3>
+          <ul>
+            <li><a href="https://youtu.be/C7vmouDOJYM" target="_blank">Intro to Cryptography</a></li>
+            <li><a href="https://youtu.be/RQzuQb0dfBM" target="_blank">Ethereum & Solidity docs</a></li>
+            <li><a href="https://youtu.be/9kuynHcM3UA" target="_blank">Hardhat / Truffle tutorials</a></li>
+            <li><a href="https://youtu.be/wHFO8D2tU4o" target="_blank">Smart contract security guides</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>🌸 Milestones</h3>
+          <ol class="muted">
+            <li>2 months — crypto basics & wallet</li>
+            <li>6 months — chain & smart contracts</li>
+            <li>12+ months — advanced protocols, audits</li>
+          </ol>
+        </section>
+
+        <footer class="muted small">Safety tip: only experiment on testnets. Never share private keys 🌸</footer>
+      </aside>
+    </div>
+  </main>
+   
+
+  <script src="bc.js"></script>
+  <script src="../global/theme.js"></script>
+</body>
+</html>

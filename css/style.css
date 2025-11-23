@@ -4,8 +4,8 @@
 
 :root {
     --bg: #f7f3ff;
-    --card: #ffffff;
-    --accent: #c8a2ff;
+    --card: #e6c7c7;
+    --accent: #b95cad;
     --text: #333;
     --soft: #e8daff;
 }
@@ -113,3 +113,9 @@ body {
     color: #777;
     margin-top: 50px;
 }
+
+.navbar .active {
+    color: #bb71ff;
+    font-weight: 600;
+}
+

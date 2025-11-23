@@ -5,19 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BloomTrack • Dashboard</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="global/theme.css">
+
 </head>
 <body>
-
-    <nav class="navbar">
+   
+   <header >  
+<nav class="navbar">
         <div class="logo">BloomTrack 🌸</div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="pages/roadmap.html">Roadmaps</a></li>
             <li><a href="pages/pomodoro.html">Pomodoro</a></li>
-            <li><a href="pages/schedule.html">Schedule</a></li>
-            <li><a href="pages/mental-health.html">Mental Health</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
         </ul>
     </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+    
 
     <header class="hero">
         <h1>Welcome to BloomTrack ✨</h1>
@@ -26,7 +47,7 @@
 
     <section class="cards-container">
         <a href="pages/roadmap.html" class="card">
-            <h2>📚 Learning Roadmaps</h2>
+            <h2>📚 Learning Roadmaps with 🗓 Daily Scheduler</h2>
             <p>Pick your career path and follow structured roadmaps.</p>
         </a>
 
@@ -35,19 +56,14 @@
             <p>Stay productive with adjustable timers.</p>
         </a>
 
-        <a href="pages/schedule.html" class="card">
-            <h2>🗓 Daily Scheduler</h2>
-            <p>Organize tasks with ease and clarity.</p>
-        </a>
-
-        <a href="pages/mental-health.html" class="card">
+        <a href="pages/mental.html" class="card">
             <h2>💗 Mental Health</h2>
             <p>Track mood & relax with guided calm tools.</p>
         </a>
     </section>
 
     <footer class="footer">BloomTrack © 2025 • Made with love 🌸</footer>
-
+    <script src="/global/theme.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

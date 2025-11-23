@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BloomTrack • Learning Roadmaps</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../global/theme.css">
 </head>
 <body>
 
-    <nav class="navbar">
+<header>  
+<nav class="navbar">
         <div class="logo">BloomTrack 🌸</div>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="roadmap.html" class="active">Roadmaps</a></li>
-            <li><a href="pomodoro.html">Pomodoro</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="mental-health.html">Mental Health</a></li>
+            <li><a class="active" href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
         </ul>
     </nav>
+    
+   </header>
+
+    <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
 
     <header class="hero small-hero">
         <h1>Choose Your Career Path ✨</h1>
@@ -25,52 +44,40 @@
     </header>
 
     <section class="cards-container">
-        <a class="card" href="#" onclick="openRoadmap('ai_ml')">
+        <a class="card" href="../roads/aiml.html" onclick="openRoadmap('ai_ml')">
             <h2>🤖 AI / Machine Learning</h2>
             <p>Maths → Python → ML → DL → Projects</p>
         </a>
 
-        <a class="card" href="#" onclick="openRoadmap('data_science')">
+        <a class="card" href="../roads/ds.html" onclick="openRoadmap('data_science')">
             <h2>📊 Data Science</h2>
             <p>Stats → Python → SQL → ML → BI Tools</p>
         </a>
 
-        <a class="card" href="#" onclick="openRoadmap('blockchain')">
+        <a class="card" href="../roads/bc.html" onclick="openRoadmap('blockchain')">
             <h2>⛓ Blockchain</h2>
             <p>Cryptography → Solidity → Smart Contracts → DApps</p>
         </a>
 
-        <a class="card" href="#" onclick="openRoadmap('cybersecurity')">
+        <a class="card" href="../roads/cyber.html" onclick="openRoadmap('cybersecurity')">
             <h2>🛡 Cybersecurity</h2>
             <p>Networking → Linux → Tools → Pentesting → CTFs</p>
         </a>
 
-        <a class="card" href="#" onclick="openRoadmap('web_dev')">
-            <h2>🌐 Web Development</h2>
-            <p>HTML → CSS → JS → Frameworks → Backend</p>
-        </a>
 
-        <a class="card" href="#" onclick="openRoadmap('python')">
+
+        <a class="card" href="../roads/python.html" onclick="openRoadmap('python')">
             <h2>🐍 Python Language</h2>
             <p>Basics → OOP → Modules → Projects</p>
         </a>
 
-        <a class="card" href="#" onclick="openRoadmap('javascript')">
-            <h2>🟨 JavaScript</h2>
-            <p>Basics → DOM → Async → Frameworks</p>
-        </a>
+       
     </section>
 
-    <div id="roadmapModal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="roadmapTitle"></h2>
-            <ul id="roadmapList"></ul>
-            <h3>📺 Recommended Resources</h3>
-            <ul id="resourceList"></ul>
-        </div>
     </div>
-
+     <footer class="footer">BloomTrack © 2025 • Made with love 🌸</footer>
     <script src="../js/roadmap.js"></script>
+    <script src="../global/theme.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI & ML — Beginner → Pro Roadmap • BloomTrack</title>
+  <link rel="stylesheet" href="aiml.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../global/theme.css">
+</head>
+<body class="theme-bloom">
+
+  <!-- BLOOMTRACK HEADER (Option A: Home · Roadmaps · Pomodoro) -->
+   
+   <header >  
+<nav class="navbar">
+        <div class="logo">BloomTrack 🌸</div>
+        <ul class="nav-links">
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+
+   
+
+  <main class="container">
+    <header class="page-header">
+      <div class="page-col">
+        <div class="page-logo">AI</div>
+      </div>
+      <div class="page-col page-info">
+        <h1>AI &amp; ML — Beginner → Pro (Interactive Roadmap)</h1>
+        <p class="lead">Triage, learn, practice, and show — a step-by-step single-page guide with interactive trackers and mini projects.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="section card">
+          <h2>Roadmap overview</h2>
+          <div class="roadmap">
+            <div class="level">
+              <div class="bubble">1</div>
+              <div>
+                <h3>Foundations</h3>
+                <p>Python, math (linear algebra, calculus, probability), git, Linux basics.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">2</div>
+              <div>
+                <h3>Core ML</h3>
+                <p>Supervised learning, regression, classification, validation, scikit-learn, feature engineering.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">3</div>
+              <div>
+                <h3>Deep Learning</h3>
+                <p>Neural networks, PyTorch/TensorFlow, CNNs, RNNs, transformers basics.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">4</div>
+              <div>
+                <h3>Production & Advanced</h3>
+                <p>Model deployment, MLOps, interpretability, scaling, state-of-the-art papers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section card">
+          <h2>Weekly plan generator</h2>
+          <p class="muted">Pick your hours per week and target weeks per level — the planner will generate a suggested schedule.</p>
+          <div class="planner-inputs">
+            <label class="muted">Hours/week: <input id="hours" type="number" value="10" min="1"></label>
+            <label class="muted">Weeks per level: <input id="weeks" type="number" value="6" min="1"></label>
+            <button class="btn" id="planBtn">Generate Plan</button>
+          </div>
+          <div id="planResult" class="muted plan-result"></div>
+        </section>
+
+        <section class="section card">
+          <h2>Mini projects (practice)</h2>
+          <ol class="projects">
+            <li><strong>Data cleaning & EDA:</strong> Titanic or similar — produce a report and charts.</li>
+            <li><strong>Classic ML:</strong> House price regression, classification with scikit-learn.</li>
+            <li><strong>Deep learning:</strong> Image classifier (transfer learning) with PyTorch.</li>
+            <li><strong>NLP:</strong> Sentiment analysis with transformers and fine-tuning.</li>
+            <li><strong>End-to-end:</strong> Deploy a simple model with FastAPI and Docker.</li>
+          </ol>
+        </section>
+
+      
+        <section class="section card">
+          <h2>Code playground (HTML/JS)</h2>
+          <div class="playground">
+            <textarea id="playCode"></textarea>
+            <div class="play-buttons">
+              <button class="btn" id="runBtn">Run</button>
+              <button class="btn clear" id="clearBtn">Clear</button>
+              <small class="muted">Output:</small>
+            </div>
+            <div class="run-area"><iframe id="preview"></iframe></div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section class="section">
+          <h3>Progress & checklist</h3>
+          <div class="card inner-card">
+            <div class="checklist" id="checklist">
+              <label class="check"><input type="checkbox" data-key="c1"> Learn Python basics</label>
+              <label class="check"><input type="checkbox" data-key="c2"> Math fundamentals</label>
+              <label class="check"><input type="checkbox" data-key="c3"> scikit-learn projects</label>
+              <label class="check"><input type="checkbox" data-key="c4"> PyTorch basics</label>
+              <label class="check"><input type="checkbox" data-key="c5"> Deploy a model</label>
+            </div>
+
+            <div class="progress-wrap">
+              <label class="muted">Completion</label>
+              <progress id="progress" value="0" max="5"></progress>
+              <div id="progressText" class="muted progress-text">0/5</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section card resources">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://youtu.be/UrsmFxEIp5k?si=VWAAwUQ_v9XHCtpe" target="_blank">Python & NumPy tutorials</a></li>
+            <li><a href="https://youtu.be/0B5eIE_1vpU?si=8XWaCjpA6sQI3Nov" target="_blank">scikit-learn cookbook</a></li>
+            <li><a href="https://youtu.be/V_xro1bcAuA?si=72ehkoKWNFcpRozU" target="_blank">Deep Learning with PyTorch</a></li>
+            <li><a href="https://youtu.be/b665B04CWkI?si=SnkJYObnki_BQZbo" target="_blank">Transformers & Hugging Face</a></li>
+          </ul>
+        </section>
+
+        <section class="section card">
+          <h3>Milestones</h3>
+          <ol class="muted">
+            <li>2 months — complete foundations & 1 project</li>
+            <li>6 months — core ML + 3 projects</li>
+            <li>12 months — advanced topics + deployed project</li>
+          </ol>
+        </section>
+
+        <footer class="muted">Tip: progress is stored in your browser.</footer>
+      </aside>
+    </div>
+  </main>
+
+  <!-- THEME POPUP (small pinteresty popup) -->
+  <div id="themePopup" class="theme-popup" aria-hidden="true">
+    <div class="theme-popup-content">
+      <h4>Theme</h4>
+      <div class="theme-options">
+        <button class="theme-choice" data-theme="bloom">BloomTrack</button>
+        <button class="theme-choice" data-theme="sunset">Sunset</button>
+        <button class="theme-choice" data-theme="night">Night</button>
+      </div>
+      <button id="closeTheme" class="btn ghost">Close</button>
+    </div>
+  </div>
+ 
+  <script defer src="aiml.js"></script>
+  <script src="../global/theme.js"></script>
+
+</body>
+</html>

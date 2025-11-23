@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloomTrack — Data Science Roadmap</title>
+  <link rel="stylesheet" href="ds.css">
+  <link rel="stylesheet" href="../global/theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="theme-bloom">
+
+  <!-- BLOOMTRACK HEADER (Option A: Home · Roadmaps · Pomodoro) -->
+   
+   <header >  
+<nav class="navbar">
+        <div class="logo">BloomTrack 🌸</div>
+        <ul class="nav-links">
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+   <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrap">
+
+    <!-- TITLE AREA -->
+    <section class="hero">
+      <h1>Data Science — Beginner → Pro Roadmap</h1>
+      <p class="subtitle">
+        Study plan, mini projects, dataset preview, quizzes & progress tracker — everything you need from zero to mastery 🌸
+      </p>
+    </section>
+
+    <div class="grid">
+
+      <!-- MAIN CONTENT -->
+      <main>
+
+        <!-- ROADMAP -->
+        <section class="card">
+          <h2>Roadmap</h2>
+          <div class="roadmap">
+
+            <div class="level">
+              <div class="bubble">1</div>
+              <div>
+                <h3>Foundations</h3>
+                <p>Python, SQL, statistics, basic plotting.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">2</div>
+              <div>
+                <h3>Data Wrangling & EDA</h3>
+                <p>Pandas, cleaning, aggregation, visualization.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">3</div>
+              <div>
+                <h3>Machine Learning</h3>
+                <p>Supervised + unsupervised learning, metrics, feature engineering.</p>
+              </div>
+            </div>
+
+            <div class="level">
+              <div class="bubble">4</div>
+              <div>
+                <h3>Deployment & Specializations</h3>
+                <p>MLOps, deep learning, NLP, time-series.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PLAN GENERATOR -->
+        <section class="card">
+          <h2>Weekly Study Plan</h2>
+
+          <div class="planner-inputs">
+            <label>Hours/week:
+              <input id="hours" type="number" value="8" min="1">
+            </label>
+
+            <label>Weeks per level:
+              <input id="weeks" type="number" value="6" min="1">
+            </label>
+
+            <button class="btn" id="planBtn">Generate Plan</button>
+          </div>
+
+          <div id="planResult" class="muted"></div>
+        </section>
+
+        <!-- MINI PROJECTS -->
+        <section class="card">
+          <h2>Mini Projects</h2>
+          <ul class="projects">
+            <li>EDA on Titanic/Iris/COVID dataset</li>
+            <li>Regression (house prices)</li>
+            <li>Classification (churn prediction)</li>
+            <li>Time-series forecasting</li>
+            <li>Sentiment analysis (NLP)</li>
+            <li>Full deployment + dashboard</li>
+          </ul>
+        </section>
+
+        <!-- CSV PREVIEW -->
+        <section class="card">
+          <h2>Dataset Preview</h2>
+          <p class="muted">Upload a CSV for an instant preview.</p>
+          <input id="csvFile" type="file" accept=".csv">
+          <div id="tableWrap" class="table-wrap"></div>
+        </section>
+
+        <!-- QUICK QUIZ -->
+        <section class="card">
+          <h2>Quick Quiz</h2>
+          <p class="muted">In one sentence: What is cross-validation used for?</p>
+          <textarea id="quizAnswer" placeholder="Type your answer..."></textarea>
+
+          <div class="quiz-actions">
+            <button class="btn" id="checkQuiz">Check</button>
+            <div id="quizFeedback" class="muted"></div>
+          </div>
+        </section>
+
+        <!-- CHART DEMO -->
+        <section class="card">
+          <h2>Chart Demo</h2>
+          <p class="muted">Enter numbers (example: [1,2,3,4])</p>
+          <textarea id="chartData">[10,12,8,15,9,20]</textarea>
+
+          <div class="play-buttons">
+            <button class="btn" id="drawChart">Draw</button>
+            <button class="btn clear" id="clearChart">Clear</button>
+          </div>
+
+          <canvas id="spark" height="80"></canvas>
+        </section>
+
+      </main>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside>
+
+        <section class="card">
+          <h3>Progress Tracker</h3>
+
+          <div id="checklist" class="checklist">
+            <label><input type="checkbox" data-key="c1"> Python & NumPy</label>
+            <label><input type="checkbox" data-key="c2"> Pandas & EDA</label>
+            <label><input type="checkbox" data-key="c3"> Machine Learning</label>
+            <label><input type="checkbox" data-key="c4"> Model Deployment</label>
+            <label><input type="checkbox" data-key="c5"> Specialization Project</label>
+          </div>
+
+          <div class="progress-wrap">
+            <label class="muted">Completion</label>
+            <progress id="progress" value="0" max="5"></progress>
+            <div id="progressText" class="muted">0/5</div>
+          </div>
+        </section>
+
+        <section class="card resources">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://youtu.be/xMpllQLKDZ4" target="_blank">Python for DS</a></li>
+            <li><a href="https://youtu.be/7u5qRX7h8a0" target="_blank">Pandas Cookbook</a></li>
+            <li><a href="https://youtu.be/0B5eIE_1vpU" target="_blank">Scikit-Learn Guide</a></li>
+            <li><a href="https://youtu.be/DooxDIRAkPA" target="_blank">Deep Learning</a></li>
+          </ul>
+        </section>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+  <script src="ds.js"></script>
+ <script src="../global/theme.js"></script>
+</body>
+</html>

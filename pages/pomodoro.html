@@ -5,26 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BloomTrack Pomodoro</title>
     <link rel="stylesheet" href="pomodoro.css">
+     <link rel="stylesheet" href="../css/style.css" />
+     <link rel="stylesheet" href="../global/theme.css">
 </head>
 
 <body>
 
     <!-- 🌸 BLOOMTRACK HEADER -->
-    <header class="bt-header">
+     <header >  
+<nav class="navbar">
         <div class="logo">BloomTrack 🌸</div>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../pages/roadmap.html">Roadmaps</a>
-            <a class="active" href="../pages/pomodoro.html">Pomodoro</a>
-            <a href="../pages/schedule.html">Schedule</a>
-            <a href="../pages/mental-health.html">Mental Health</a>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="../pages/roadmap.html">Roadmaps</a></li>
+            <li><a href="../pages/pomodoro.html">Pomodoro</a></li>
+            <div class="top-actions">
+    </div>
+ <button id="settingsBtn" class="settings-btn">⚙️</button>
+        </ul>
+    </nav>
+    
+   </header>
+
+    <!-- 🌸 THEME POPUP -->
+<div class="theme-popup" id="themePopup">
+    <div class="theme-popup-content">
+        <h3>Choose Theme ꉂ(˵˃ ᗜ ˂˵) </h3>
+        <div class="theme-options">
+            <button class="theme-choice" data-theme="default">BloomTrack</button>
+            <button class="theme-choice" data-theme="sunset">Sunset </button>
+            <button class="theme-choice" data-theme="night">Night</button>
+        </div>
+
+        <button id="closePopup" class="close-popup">Close</button>
+    </div>
+</div>
+    
 
     <!-- ✨ Motivational Popup -->
     <div id="quotePopup" class="quote-popup">
         <p id="quoteText"></p>
-        <button onclick="closeQuote()">Let's Study 💕</button>
+        <button onclick="closeQuote()">Let's Study!!</button>
     </div>
 
     <!-- 🌸 MAIN POMODORO SECTION -->
@@ -82,19 +103,21 @@
         <label>Background Sound</label>
         <select id="soundSelect" onchange="changeSound()">
             <option value="">None</option>
-            <option value="rain.mp3">Rain 🌧️</option>
-            <option value="lofi.mp3">Lofi 🎧</option>
-            <option value="piano.mp3">Piano 🎹</option>
-            <option value="brownnoise.mp3">Brown Noise 🌫️</option>
+            <option value="../rain.mp3" loop >Rain 🌧️</option>
+            <option value="../lofi.mp3" loop>Lofi 🎧</option>
+            <option value="../piano.mp3" loop>Piano 🎹</option>
+            <option value="../brown.mp3" loop>Brown Noise 🌫️</option>
         </select>
 
         <button onclick="closeSettings()" class="close-btn">Close</button>
     </div>
 
-    <audio id="endSound" src="ding.mp3"></audio>
+    <audio id="endSound" src="../ding.mp3"></audio>
     <audio id="bgSound" loop></audio>
 
+    <footer class="footer">BloomTrack © 2025 • Made with love 🌸</footer>
     <script src="pomodoro.js"></script>
-
+     <script src="../global/theme.js"></script>
+    
 </body>
 </html>
